@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+.service-technology{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background: #f9f9f9;
+    display: block;
+    z-index: 2;
+}
+@media only screen and (max-width : 450px){
+  .service-technology{
+    height: 1500px;
+  }
+}
+.service-technology-header{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+@media only screen and (max-width : 450px){
+  .service-technology-header{
+    height: 250px;
+  }
+}
+.service-technology-header h2{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    font-family: 'Source Sans Pro', sans-serif;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 30px;
+    color: #000;
+}
+.service-technology-header p{
+    width: 90%;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    line-height: 30px;
+    color: #323232;   
+}
+.service-technology-container{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    width: 95%;
+    height: 400px;
+    top: 10px;
+    align-items: center;
+    text-align: center;
+    background: transparent;
+}
+
+
+/* .service-technology-container .item{
+    margin-right: 2px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    padding-right: 15px;
+} */
+
+
+.service-technology-1{
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: repeat(1, 100%);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    z-index: 5;
+    margin: 0px auto;
+    background: transparent;
+}
+@media only screen and (max-width : 450px){
+  .service-technology-1{
+    grid-template-rows: repeat(2, 100%);
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.service-technology-1-1{
+    background-color: #f1f8ff;
+    border-top-left-radius: 10px;
+    transition: all 0.1s;
+}
+.service-technology-1-1:hover{
+  transform: scale(1.01);
+  transition: all 0.1s;
+}
+@media only screen and (max-width : 450px){
+  .service-technology-1-1{
+    border-bottom-left-radius: 0;
+  }
+}
+.service-technology-1-2{
+    background-color: #eaf3fe;
+    border-top-right-radius: 10px;
+    transition: all 0.1s;
+}
+.service-technology-1-2:hover{
+  transform: scale(1.01);
+  transition: all 0.1s;
+}
+@media only screen and (max-width : 450px){
+  .service-technology-1-2{
+    border-bottom-right-radius: 0;
+  }
+}
+
+
+
+
+.service-technology-2{
+    position: relative;
+    display: grid;
+    width: 100%;
+    top: 5px;
+    z-index: 1;
+    height: 100%;
+    grid-template-rows: repeat(1, 100%);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    margin: 0px auto;
+    background: transparent;
+}
+@media only screen and (max-width : 450px){
+  .service-technology-2{
+    grid-template-rows: repeat(2, 100%);
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.service-technology-2-1{
+    background-color: #dfeeff!important;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 0!important;
+    transition: all 0.1s;
+}
+.service-technology-2-1:hover{
+  transform: scale(1.01);
+  transition: all 0.1s;
+}
+@media only screen and (max-width : 450px){
+  .service-technology-2-1{
+    border-bottom-left-radius: 0;
+  }
+}
+.service-technology-2-2{
+    background-color: #eaf3fe;
+    border-bottom-right-radius: 10px;
+    transition: all 0.1s;
+    border-top-right-radius: 0!important;
+}
+.service-technology-2-2:hover{
+  transform: scale(1.01);
+  transition: all 0.1s;
+}
+@media only screen and (max-width : 450px){
+  .service-technology-2-2{
+    border-bottom-right-radius: 10px;
+  }
+}
+
+
+.service-tech-header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 80px;
+    gap: 25px;
+    justify-content: start;
+    width: 40%;
+    padding: 0 20px;
+}
+.service-tech-header h4{
+    font-size: 16px;
+    top: 2px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #1476f2;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    position: relative;
+}
+.service-tech-list{
+    margin-top: 20px;
+    position: relative;
+    width: 90%;
+    text-decoration: none;
+    list-style: none;
+    justify-content: start;
+    align-items: flex-start;
+    text-align: start;
+}
+.service-tech-list li{
+    display: block;
+    font-size: 16px;
+    line-height: 1.15;
+    border-radius: 13px;
+    padding: 3px 10px;
+    margin-bottom: 14px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.service-tech-list li:before {
+    content: "";
+    display: inline-block;
+    margin-left: -16px;
+    margin-right: 12px;
+    width: 5px;
+    border-radius: 50%;
+    height: 5px;
+    /* background-color: #1476f2; */
+    background-color: #0275d8;
+}
+  </style>
+</head>
+<body>
+  <section>
+    <div class="service-technology">
+        <div class="service-technology-header">
+        <h2>The way we work</h2>
+        <p>To streamline operations and scale our joint creative marketing association, the assigned account manager, studies documented brand insights & guideline set by the client representative. This helps us offer you the best digital marketing agency services.</p>
+    </div>
+        <div class="service-technology-container">
+            <div class="service-technology-1">
+                <div class="service-technology-1-1 item">
+                    <div class="service-tech-header">
+                        <img src="svg/language.svg" alt="">
+                        <h4>language</h4>
+                    </div>
+                    <ul class="service-tech-list">
+                      <li>This article is about the online encyclopedia. For Wikipedia's home page, see Main Page. This article is about the online encyclopedia. For Wikipedia's home page, see Main Page. This article is about the online encyclopedia. For Wikipedia's home page, see Main Page.</li>
+                      <li>Industrial AR/VR solutions</li>
+                      <li>This article is about the online encyclopedia. For Wikipedia's home page, see Main Page. This article is about the online encyclopedia. For Wikipedia's home page, see Main Page.</li>
+                      <li>Installations and trainings</li>
+                        </ul>
+                </div>
+                <div class="service-technology-1-2 item">
+                    <div class="service-tech-header">
+                        <img src="svg/language.svg" alt="">
+                        <h4>FRAMEWORKS</h4>
+                    </div>
+                    <ul class="service-tech-list">
+                      <li>Mixed reality applications</li>
+                      <li>Industrial AR/VR solutions</li>
+                      <li>3D modelling and prototyping</li>
+                      <li>Installations and trainings</li>
+                        </ul>
+                </div>
+            </div>
+            <div class="service-technology-2">
+                <div class="service-technology-2-1 item">
+                    <div class="service-tech-header">
+                        <img src="svg/language.svg" alt="">
+                        <h4>MOBILE</h4>
+                    </div>
+                    <ul class="service-tech-list">
+                      <li>Mixed reality applications</li>
+                      <li>Industrial AR/VR solutions</li>
+                      <li>3D modelling and prototyping</li>
+                      <li>Installations and trainings</li>
+                        </ul>
+                </div>
+                <div class="service-technology-2-2 item">
+                    <div class="service-tech-header">
+                        <img src="svg/language.svg" alt="">
+                        <h4>WEB</h4>
+                    </div>
+                    <ul class="service-tech-list">
+                      <li>Mixed reality applications</li>
+                        <li>Industrial AR/VR solutions</li>
+                        <li>3D modelling and prototyping</li>
+                        <li>Installations and trainings</li>
+                        </ul>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

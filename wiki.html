@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        /* ::-webkit-scrollbar{
+            width: 10px;
+        }
+        .scrollPath{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .progressbar{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 100%;
+            background: linear-gradient(to top, #008aff,#00ffe7);
+            animation: scrollAnimation 4s linear infinite;
+        }
+        @keyframes scrollAnimation{
+            0%,100%{
+                filter: hue-rotate(0deg);
+            }
+            50%{
+                filter: hue-rotate(360deg);
+            }
+        }
+        .progressbar::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, #008aff,#00ffe7);
+            filter: blur(10px);
+        }
+        .progressbar::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, #008aff,#00ffe7);
+            filter: blur(30px);
+        } */
+
+
+
+
+        section{
+            position: relative;
+            height: 100vh;
+            display: block;
+            width: 100%;
+            /* scroll-snap-align: start; */
+            display: block;
+        }
+        .main-container{
+            /* scroll-snap-type: y mandatory;
+            overflow-y: scroll; */
+            height: 100vh;
+        }
+        .home1{
+            position: relative;
+            background: url(images/Website.jpg);
+            height: 100%;
+            width: 100%;
+        }
+        .home2{
+            position: relative;
+            background: transparent;
+            height: 100%;
+            width: 100%;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .home3{
+            position: relative;
+            background: gray;
+            height: 100%;
+            width: 100%;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .home4{
+            position: relative;
+            background: black;
+            height: 100%;
+            width: 100%;
+        }
+        .home5{
+            position: relative;
+            background: gray;
+            height: 100%;
+            width: 100%;
+        }
+        .home1-container,
+        .home2-container,
+        .home3-container,
+        .home4-container,
+        .home5-container{
+            position: relative;
+            width: 98%;
+            height: 98%;
+            display: block;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .home1-header,
+        .home3-header,
+        .home5-header{
+            position: relative;
+            width: 200px;
+            height: 40px;
+            top: 20px;
+            display: block;
+            border-bottom: #000 dotted 5px;  
+            text-align: start;
+        }
+        .home1-header h2,
+        .home3-header h2,
+        .home5-header h2{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            color: #000;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+
+        .home2-header,
+        .home4-header{
+            position: relative;
+            width: 200px;
+            height: 40px;
+            top: 20px;
+            display: block;
+            border-bottom: gray dotted 5px;  
+            text-align: start;
+        }
+        .home2-header h2,
+        .home4-header h2{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            color: gray;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+
+
+
+
+
+
+        .home2-wrapper{
+            width: 100%;
+            height: 100%;
+            margin-top: 40px;
+            display: grid;
+            grid-template-rows: repeat(1, 45%);
+            grid-template-columns: repeat(2, 1fr);
+            /* grid-gap: 10px; */
+        }
+        @media only screen and (max-width : 1030px) {
+            .home2-wrapper{
+                grid-template-rows: repeat(1, 43%);
+            grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media only screen and (max-width : 820px) {
+            .home2-wrapper{
+                grid-template-rows: repeat(1, 47%);
+            grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media only screen and (max-width : 770px) {
+            .home2-wrapper{
+                grid-template-rows: repeat(1, 46%);
+            grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media only screen and (max-width : 450px) {
+            .home2-wrapper{
+                grid-template-rows: repeat(2, 23%);
+            grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        .home2-box{
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: transparent;
+            position: relative;
+        }
+        .home2-box-container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .card{
+            position: relative;
+            width: 80%;
+            height: 80%;
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            text-align: center;
+            background: transparent;
+            align-items: center;
+            border-radius: 20px;
+            transition: 0.5s all;
+        }
+        .card .circle{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            top: 0;
+            left: 0;
+        }
+        .card .circle::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            background: red;
+            clip-path: circle(25% at center);
+            transition: 0.5s all;
+        }
+        .card .circle:hover:before{
+            background: blue;
+            clip-path: circle(100% at center);
+            transition: 0.5s all;
+        }
+        .card img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 30%;
+            pointer-events: none;
+            transition: 0.5s all;
+        }
+        .card:hover img{
+            /* margin-left: 25%; */
+            width: 35%;
+            top: 50%;
+            left: 80%;
+            transform: translate(-50%,-50%);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        .home4-wrapper{
+            position: relative;
+            width: 100%;
+            height: 90%;
+            display: block;
+            background: transparent;
+            top: 40px;
+        }
+        @media only screen and (max-width : 1030px) {
+            .home4-wrapper{
+                height: 85%;
+            }
+        }
+        @media only screen and (max-width : 840px) {
+            .home4-wrapper{
+                height: 93%;
+            }
+        }
+        @media only screen and (max-width : 770px) {
+            .home4-wrapper{
+                height: 92%;
+            }
+        }
+        @media only screen and (max-width : 450px) {
+            .home4-wrapper{
+                height: 91%;
+            }
+        }
+        .home4-wrapper-header{
+            position: relative;
+            width: 100%;
+            height: 50px;
+            display: block;
+        }
+        .home4-wrapper-header-container{
+            width: 30%;
+            height: 100%;
+            display: grid;
+            background: #fff;
+            grid-template-rows: repeat(1, 40px);
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            margin: 0 auto;
+        }
+        .home4-wrapper-header-1,
+        .home4-wrapper-header-2{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            align-items: center;
+            text-align: center;
+        }
+        .home4-wrapper-header-1 h2,
+        .home4-wrapper-header-2 h2{
+            color: #000;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .service-box{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: grid;
+            grid-template-rows: repeat(1, 100%);
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="progressbar" id="progreebar"></div>
+    <div class="scrollPath"></div> -->
+    <div class="main-container">
+        <section>
+            <div class="home1">
+                <div class="home1-container">
+                    <div class="home1-header">
+                        <h2>About Us</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="home2">
+            <!-- <div class="home2" data-aos="fade-up"
+            data-aos-anchor-placement="bottom-center"> -->
+                <div class="home2-container">
+                    <div class="home2-header">
+                        <h2>About Us</h2>
+                    </div>
+                    <div class="home2-wrapper">
+                        <div class="home2-box">
+                            <div class="home2-box-container">
+                                <div class="card">
+                                    <div class="circle">
+                                        <img src="images/passport.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home2-box">
+                            <div class="home2-box-container">
+                                <div class="card">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="home2-box">
+                            <div class="home2-box-container">
+                                <div class="card">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home2-box">
+                            <div class="home2-box-container">
+                                <div class="card">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="home3">
+                <div class="home3-container">
+                    <div class="home3-header">
+                        <h2>About Us</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="home4">
+                <div class="home4-container">
+                    <div class="home4-header">
+                        <h2>Services</h2>
+                    </div>
+                    <div class="home4-wrapper">
+                        <div class="home4-wrapper-header">
+                            <div class="home4-wrapper-header-container">
+                                <div class="home4-wrapper-header-1">
+                                    <h2>Level</h2>
+                                </div>
+
+                                <div class="home4-wrapper-header-2">
+                                    <h2>Level</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="home5">
+                <div class="home5-container">
+                    <div class="home5-header">
+                        <h2>About Us</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+    <!-- <script>
+        AOS.init();
+      </script> -->
+
+    <!-- <script>
+        let progress = document.getElementById('progressbar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function(){
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+    </script> -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
